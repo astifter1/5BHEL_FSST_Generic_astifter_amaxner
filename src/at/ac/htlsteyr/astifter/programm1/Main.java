@@ -2,33 +2,44 @@ package at.ac.htlsteyr.astifter.programm1;
 
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
-        Stack<> head = new Stack<>();
+        Stack<Arrays> s = new Stack<>();
+
+
     }
 }
 
-class Stack{
-    List list = new LinkedList();
+class Stack<A> {
 
-    public <T> List<T> fromArrayToList(T[] a) {
-        return Arrays.stream(a).collect(Collectors.toList());
-    }
+    int array[];
 
     public Stack(){
 
     }
 
-    void push(){
+    void push(int value) {
+        int i = 0;
+        boolean control = true;
+
+        while (array[i] != 0 && control) {
+            if (i >= 10) {
+                control = false;
+                System.out.println("Array voll");
+            }
+            i++;
+
+        }
+        if (control) {
+            array[i] = value;
+        }
 
     }
-    void pull(){
 
+        int pull(int i){
+            return array[i];
     }
 
 }
