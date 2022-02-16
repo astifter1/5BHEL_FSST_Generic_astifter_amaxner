@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Stack<Integer> s = new Stack<>();
+        Stack<Integer> s = new Stack<>();//Creating a Stack Object with the generic data type Integer
 
         //Testing
         int i=0;
@@ -24,17 +24,21 @@ public class Main {
 
 class Stack<T> {
 
+    //Make an Array and an Object with a length of 10
     T array[];
     Object a = new Object[10];
     int stackpointer = 0;
 
+    //Constructor that initalises the Array with the Object
     public Stack(){
         array = (T[])new Object[10];
     }
 
+    //Add a value to Stack and increment the Stackpointer
     void push(T value) {
 
         try {
+            //Check if an Overflow occured
             if(stackpointer >= 10) {
                 throw new Stackoverflow();
             }
@@ -47,9 +51,9 @@ class Stack<T> {
 
     }
 
+    //Get a value from stack and decrement the Stackpointer
     T pull(){
-
-
+        //Check if the Stack is empty
         try {
             if(stackpointer == 0){
                 throw new Stackunderflow();
@@ -63,6 +67,7 @@ class Stack<T> {
 
 }
 
+//Exception classes
 class Stackoverflow extends Exception{
     public Stackoverflow(){
         System.out.println("Stackoverflow Error");
