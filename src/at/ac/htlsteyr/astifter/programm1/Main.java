@@ -10,8 +10,18 @@ public class Main {
 
         //Testing
         int i=0;
-        s.push(25);
-        s.push(32);
+        //Check if an Overflow occured
+        try {
+            s.push(25);
+            s.push(32);
+
+        } catch (ArrayIndexOutOfBoundsException e){//Bypass the ArrayIndexOutOfBoundsException
+            try {
+                throw new Stackoverflow();
+            } catch (Stackoverflow stackoverflow) {
+                stackoverflow.printStackTrace();
+            }
+        }
         s.pull();
        /* i = s.pull();
         System.out.println(i);
@@ -36,16 +46,6 @@ class Stack<T> {
 
     //Add a value to Stack and increment the Stackpointer
     void push(T value) {
-
-        try {
-            //Check if an Overflow occured
-            if(stackpointer >= 10) {
-                throw new Stackoverflow();
-            }
-
-        } catch (Stackoverflow stackoverflow) {
-            stackoverflow.printStackTrace();
-        }
         array[stackpointer] = value;
         stackpointer++;
 
