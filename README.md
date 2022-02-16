@@ -5,6 +5,7 @@ Stifter: 1. Ausprogrammieren der Stack Methoden
          3. Hinzufügen der Exceptions
          4. Schreiben von Kommentaren
          5. Umgehen der ArrayIndexOutOfBoundsException
+         6. Aufteilen der Klassen, richtiges werfen der Exceptions
 
 Maxner: 1. Recherchiert
         2. Push Pop von Stack programmiert

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/5BHEL_FSST_Generics_astifter_amaxner.iml" filepath="$PROJECT_DIR$/5BHEL_FSST_Generics_astifter_amaxner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/class Stack/class Stack.iml" filepath="$PROJECT_DIR$/class Stack/class Stack.iml" />
     </modules>
   </component>
 </project>
