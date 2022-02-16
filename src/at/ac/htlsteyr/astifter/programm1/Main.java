@@ -6,40 +6,38 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Stack<Arrays> s = new Stack<>();
+        Stack<Integer> s = new Stack<>();
 
+        //Testing
+        int i=0;
+        s.push(25);
+        s.push(32);
+        i = s.pull();
+        System.out.println(i);
+
+        i = s.pull();
+        System.out.println(i);
 
     }
 }
 
-class Stack<A> {
+class Stack<T> {
 
-    int array[];
+    T array[];
+    Object a = new Object[10];
+    int stackpointer = 0;
 
     public Stack(){
-
+        array = (T[])new Object[10];
     }
 
-    void push(int value) {
-        int i = 0;
-        boolean control = true;
-
-        while (array[i] != 0 && control) {
-            if (i >= 10) {
-                control = false;
-                System.out.println("Array voll");
-            }
-            i++;
-
-        }
-        if (control) {
-            array[i] = value;
-        }
-
+    void push(T value) {
+        array[stackpointer] = value;
+        stackpointer++;
     }
 
-        int pull(int i){
-            return array[i];
+    T pull(){
+        return array[stackpointer];
     }
 
 }
