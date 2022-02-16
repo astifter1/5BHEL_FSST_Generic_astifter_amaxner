@@ -22,11 +22,11 @@ public class Main {
                 stackoverflow.printStackTrace();
             }
         }
-        s.pull();
-       /* i = s.pull();
+        s.pop();
+       /* i = s.pop();
         System.out.println(i);
 
-        i = s.pull();
+        i = s.pop();
         System.out.println(i);
 */
     }
@@ -52,7 +52,7 @@ class Stack<T> {
     }
 
     //Get a value from stack and decrement the Stackpointer
-    T pull(){
+    T pop(){
         //Check if the Stack is empty
         try {
             if(stackpointer == 0){
