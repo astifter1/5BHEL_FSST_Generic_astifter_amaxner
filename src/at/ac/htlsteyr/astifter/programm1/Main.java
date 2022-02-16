@@ -12,12 +12,13 @@ public class Main {
         int i=0;
         s.push(25);
         s.push(32);
-        i = s.pull();
+        s.pull();
+       /* i = s.pull();
         System.out.println(i);
 
         i = s.pull();
         System.out.println(i);
-
+*/
     }
 }
 
