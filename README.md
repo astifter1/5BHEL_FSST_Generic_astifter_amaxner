@@ -10,3 +10,4 @@ Stifter: 1. Ausprogrammieren der Stack Methoden
 Maxner: 1. Recherchiert
         2. Push Pop von Stack programmiert
 		3. Stifter assistiert
+		4. Programm getestet und Fehler gefunden
